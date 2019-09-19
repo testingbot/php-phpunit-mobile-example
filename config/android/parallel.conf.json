@@ -1,0 +1,19 @@
+{
+	"capabilities": {
+	  "build": "phpunit-testingbot",
+	  "name": "parallel_test",
+	  "app":"https://testingbot.com/appium/sample.apk",
+	  "realDevice": true
+	},
+  
+	"environments": [{
+		"deviceName": "Galaxy S10",
+		"version": "9.0",
+		"platformName": "Android"
+	},{
+		"deviceName": "Galaxy Tab A",
+		"version": "9.0",
+		"platformName": "Android"
+	}]
+  }
+  

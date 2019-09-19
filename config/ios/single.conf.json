@@ -1,0 +1,15 @@
+{
+	"capabilities": {
+	  "build": "phpunit-testingbot",
+	  "name": "single_test",
+	  "app":"https://testingbot.com/appium/sample.ipa",
+	  "realDevice": true
+	},
+  
+	"environments": [{
+	  "deviceName": "iPhone 6s",
+	  "version": "12.1",
+	  "platformName": "iOS"
+	}]
+  }
+  

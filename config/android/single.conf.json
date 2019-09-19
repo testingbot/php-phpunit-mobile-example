@@ -1,0 +1,15 @@
+{
+	"capabilities": {
+	  "build": "phpunit-testingbot",
+	  "name": "single_test",
+	  "realDevice": true,
+	  "app":"https://testingbot.com/appium/sample.apk"
+	},
+  
+	"environments": [{
+	  "deviceName": "Galaxy S10",
+	  "version": "9.0",
+	  "platformName": "Android"
+	}]
+  }
+  
