@@ -21,7 +21,6 @@ class TestingBotTest extends \PHPUnit_Extensions_AppiumTestCase
         $this->setHost($host);
         $caps = isset($params['desiredCapabilities']) ? $params['desiredCapabilities'] : array();
         $this->setDesiredCapabilities($caps);
-        $this->setUpSessionStrategy($params);
     }
 }
 
