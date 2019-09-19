@@ -16,11 +16,13 @@ class TestingBotTest extends \PHPUnit_Extensions_AppiumTestCase
 
         $host = $GLOBALS['TB_KEY'] . ":" . $GLOBALS['TB_SECRET'] . "@hub.testingbot.com";
 
+        $this->setHost($host);
         $this->setPort(443);
         $caps = $this->getDesiredCapabilities();
-        $this->setHost($host);
+        $this->setSecure(TRUE);
         $caps = isset($params['desiredCapabilities']) ? $params['desiredCapabilities'] : array();
         $this->setDesiredCapabilities($caps);
+        $this->setUpSessionStrategy($params);
     }
 }
 
