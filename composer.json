@@ -1,7 +1,7 @@
 {
   "require": {
-    "phpunit/phpunit-selenium": "*",
-    "facebook/webdriver": "dev-master",
+    "phpunit/phpunit-selenium": "dev-master",
+    "facebook/webdriver": "dev-community",
     "appium/php-client": "dev-master"
   },
   "scripts": {
