@@ -1,19 +1,23 @@
 {
-	"capabilities": {
-	  "build": "phpunit-testingbot",
-	  "name": "parallel_test",
-	  "app":"https://testingbot.com/appium/sample.apk",
-	  "realDevice": true
-	},
-  
-	"environments": [{
-		"deviceName": "Galaxy S10",
-		"version": "9.0",
-		"platformName": "Android"
-	},{
-		"deviceName": "Galaxy Tab A",
-		"version": "9.0",
-		"platformName": "Android"
-	}]
-  }
-  
+  "capabilities": {
+    "appium:app": "https://testingbot.com/appium/sample.apk",
+    "tb:options": {
+      "build": "phpunit-testingbot",
+      "name": "parallel_test"
+    }
+  },
+  "environments": [
+    {
+      "platformName": "Android",
+      "appium:deviceName": "Pixel 8",
+      "appium:platformVersion": "14.0",
+      "appium:automationName": "UiAutomator2"
+    },
+    {
+      "platformName": "Android",
+      "appium:deviceName": "Pixel 9",
+      "appium:platformVersion": "15.0",
+      "appium:automationName": "UiAutomator2"
+    }
+  ]
+}
