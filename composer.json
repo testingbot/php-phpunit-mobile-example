@@ -1,22 +1,22 @@
 {
   "require": {
-    "phpunit/phpunit-selenium": "dev-master",
-    "facebook/webdriver": "dev-community",
-    "appium/php-client": "dev-master"
+    "php": ">=8.2",
+    "php-webdriver/webdriver": "^1.15",
+    "phpunit/phpunit": "^11.0"
   },
   "scripts": {
-    "android_single": "CONFIG_FILE=config/android/single.conf.json vendor/phpunit/phpunit/phpunit tests/android/single_test.php",
-    "ios_single": "CONFIG_FILE=config/ios/single.conf.json vendor/phpunit/phpunit/phpunit tests/ios/single_test.php",
-    "android_parallel": "CONFIG_FILE=config/android/parallel.conf.json vendor/phpunit/phpunit/phpunit tests/android/single_test.php",
-    "ios_parallel": "CONFIG_FILE=config/ios/parallel.conf.json vendor/phpunit/phpunit/phpunit tests/ios/single_test.php"
+    "android_single": [
+      "@putenv CONFIG_FILE=config/android/single.conf.json",
+      "phpunit tests/android"
+    ],
+    "ios_single": [
+      "@putenv CONFIG_FILE=config/ios/single.conf.json",
+      "phpunit tests/ios"
+    ],
+    "android_parallel": "@php lib/parallel.php config/android/parallel.conf.json tests/android",
+    "ios_parallel": "@php lib/parallel.php config/ios/parallel.conf.json tests/ios"
   },
   "autoload": {
     "classmap": ["lib/"]
-  },
-  "repositories:": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/appium/php-client"
-    }
-  ]
+  }
 }

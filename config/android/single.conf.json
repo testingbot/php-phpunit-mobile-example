@@ -1,15 +1,17 @@
 {
-	"capabilities": {
-	  "build": "phpunit-testingbot",
-	  "name": "single_test",
-	  "realDevice": true,
-	  "app":"https://testingbot.com/appium/sample.apk"
-	},
-  
-	"environments": [{
-	  "deviceName": "Galaxy S10",
-	  "version": "9.0",
-	  "platformName": "Android"
-	}]
-  }
-  
+  "capabilities": {
+    "appium:app": "https://testingbot.com/appium/sample.apk",
+    "tb:options": {
+      "build": "phpunit-testingbot",
+      "name": "single_test"
+    }
+  },
+  "environments": [
+    {
+      "platformName": "Android",
+      "appium:deviceName": "Pixel 8",
+      "appium:platformVersion": "14.0",
+      "appium:automationName": "UiAutomator2"
+    }
+  ]
+}
